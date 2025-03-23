@@ -18,11 +18,15 @@ body {
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  font-family: var(--fs-base);
+  background-color: var(--clr-stone100);
 }
 /* 5. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 /* 6. Inherit fonts for form controls */
 input, button, textarea, select {
@@ -46,8 +50,212 @@ h1, h2, h3, h4, h5, h6 {
   isolation: isolate;
 }
 
-/** Your CSS Below **/
+/*************************
+  Base Styles
+*************************/
+body {
+  font-family: var(--fs-base);
+  background-color: var(--clr-stone100);
+}
 
-/** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+/*************************
+  Typography
+*************************/
+/* Font Families */
+h1, h2 {
+  font-family: var(--fs-accent);
+}
+
+/* Font Weights */
+h1 {
+  font-weight: var(--fw-black);
+}
+
+h2 {
+  font-weight: var(--fw-bold);
+}
+
+p, li {
+  font-weight: var(--fw-regular);
+}
+
+/* Font Sizes */
+h1 {
+  font-size: var(--font-header);
+}
+
+h2 {
+  font-size: var(--font-sub-header);
+}
+
+p, li {
+  font-size: var(--font-paragraph);
+}
+
+/*************************
+  Layout & Containers
+*************************/
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*************************
+  Header Styles
+*************************/
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-align: left;
+  color: var(--clr-stone900);
+}
+
+header p {
+  font-size: 1.2em;
+  color: var(--clr-stone600);
+  text-align: justify
+}
+
+/*************************
+  Section Styles
+*************************/
+/* Common Section Styles */
+section h2 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  color: var(--clr-stone900);
+}
+
+section p, 
+section ul, 
+section ol {
+  font-size: 1.1em;
+  color: var(--clr-stone600);
+}
+
+/* Preparation Time Section */
+.preparation-time {
+  background-color: var(--clr-rose50);
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.preparation-time h2 {
+  color: var(--clr-rose800);
+  margin-left: 10px;
+}
+
+.preparation-time ul {
+  margin-left: 10px;
+}
+
+/* Ingredients Section */
+.ingredients h2 {
+  color: var(--clr-brown800);
+}
+
+.ingredients ul li::marker {
+  color: var(--clr-brown800);
+}
+
+/* Instructions Section */
+.instructions h2 {
+  color: var(--clr-brown800);
+}
+
+.instructions ol li::marker {
+  color: var(--clr-brown800);
+  font-weight: bold;
+}
+
+/* Nutrition Section */
+.nutrition h2 {
+  color: var(--clr-brown800);
+}
+
+.nutrition table {
+  width: 100%;
+}
+
+.nutrition-value {
+  color: var(--clr-brown800);
+}
+
+/*************************
+  Utility Classes
+*************************/
+.divider {
+  border: 1px solid var(--clr-stone150);
+  margin: 20px 0;
+}
+
+/*************************
+  Footer & Attribution
+*************************/
+.attribution {
+  font-size: 0.9em;
+  text-align: center;
+  color: var(--clr-stone600);
+}
+
+.attribution a {
+  color: var(--clr-brown800);
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+/* List styling */
+ul, ol {
+  padding-left: 20px;
+}
+
+ul li, ol li {
+  margin-bottom: 10px;
+}
+
+/* Instructions list styling */
+.instructions ol li {
+  margin-bottom: 15px;
+}
+
+/* Nutrition section styling */
+.nutrition ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nutrition ul li {
+  margin-bottom: 5px;
+}
+
+.row-title {
+  width: 50%;
+}
+
+hr {
+  border-color: var(--clr-stone150);
+}
+
+/*************************
+  Media Queries
+*************************/
+@media (max-width: 768px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
+
